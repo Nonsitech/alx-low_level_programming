@@ -1,5 +1,5 @@
 #include <stdio.h>
-include"main.c"
+include"main.h"
 
 /**
  * print_most_numbers - print numbers besides 2 and 4

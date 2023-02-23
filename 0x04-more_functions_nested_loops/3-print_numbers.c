@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include"main.c"
+#include"main.g"
 
 /**
  * print_numbers - print 0 - 9
