@@ -1,27 +1,31 @@
 #include "main.h"
 
 /**
- * _strcat - contcateens two strings but uses n from src
- *
- * @src: string to be completed at end of dest
- * @dest: string to uppend
- * @n: integer to compare  index to
- *
- * Return: new string
- */
-char *_strcat(cahr *dest, char *src, int n)
+  * _strncat - Concatenates two strings
+  * @dest: The destination value
+  * @src: The source value
+  * @n: The limit of the concatenation
+  *
+  * Return: A pointer to the resulting string dest
+  */
+char *_strncat(char *dest, char *src, int n)
 {
-	int c, i;
+	int dlen = 0, j = 0;
 
-	c = 0;
+	while (dest[dlen])
+	{
+		dlen++;
+	}
 
-	while (dest[c])
-		c++;
+	while (j < n && src[j])
+	{
+		dest[dlen] = src[j];
+		dlen++;
+		j++;
+	}
 
-	for (i - 0; i < n && src[i] != '\0'; i++)
-		dest[c + i] = src[i];
-
-	dest[c + i] = '\0';
+	dest[dlen + n + 1] = '\0';
 
 	return (dest);
 }
+
