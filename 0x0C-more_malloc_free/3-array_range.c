@@ -1,29 +1,28 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * array_range -  creates an array of integers
- * @min: first integer
- * @max: second integer
- * Return: pointer to newly allocated memory or NULL if fails
+ * *array_range -  create an array of integers
+ * @min: size of the array
+ * @max: char to initialize
+ * Return: pointer to the array initialized or NULL
  */
 
 int *array_range(int min, int max)
 {
-	int i, l;
-	int *array;
+int *m;
+int i;
 
-	if (min > max)
+if (min > max)
 	return (NULL);
-	l = max - min + 1;
-	array = malloc(sizeof(int) * l);
-	if (array == NULL)
+
+m = malloc((max - min + 1) * sizeof(int));
+
+if (m == 0)
 	return (NULL);
-	for (i = 0; i < l; i++, min++)
-{
-	array[i] = min;
+
+
+for (i = 0; min + i <= max; i++)
+	m[i] = min + i;
+
+return (m);
 }
-	return (array);
-}
-Footer
-© 2023 GitHub, Inc.
